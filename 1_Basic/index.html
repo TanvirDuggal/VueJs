@@ -1,0 +1,22 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>VUE JS 1 BASIC</title>
+        
+        <link href="style.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div id="app">
+            <div>
+                <label for="goal">GOAL</label>
+                <input type="text" id="goal" v-module="enteredValue"/>
+                <button v-on:click="addGoals">Add Goals</button>
+            </div>
+            <ul>
+                <li v-for="goal in goals">{{ goal }}</li>
+            </ul>
+        </div>
+        <script src="https://unpkg.com/vue@next"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
