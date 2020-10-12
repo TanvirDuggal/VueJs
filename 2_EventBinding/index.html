@@ -21,16 +21,16 @@
       <button v-on:click="add(5)">Add</button>
       <button v-on:click="Sub(5)">Remove</button>
       <p>Result: {{ counter }}</p>
-      <input type="text" v-on:input="setName"> </input>
-      <p>{{ name }}</p>
-      <input type="text" v-on:input="fullName($event, 'duggal')"> </input>
+      <input type="text" v-bind:value='name' v-on:input="setName"> </input>
       <p>{{ fName }}</p>
+      <input type="text" v-model="fName"> </input>
+      <p>{{ fullName }}</p>
       <form v-on:submit.prevent="submitForm">
         <input type="text"></input>
         <p></p>
         <button> Sign Up </button>
       </form>
-
+      <button v-on:click="resetValue"> RESET </button>  
     </section>
   </body>
 </html>
